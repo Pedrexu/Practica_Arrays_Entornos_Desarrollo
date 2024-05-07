@@ -1,6 +1,7 @@
 package tests;
 
 import org.junit.platform.runner.JUnitPlatform;
+import util.misArrays;
 import org.junit.platform.suite.api.SelectClasses;
 import org.junit.runner.RunWith;
 
