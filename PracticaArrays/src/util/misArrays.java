@@ -69,11 +69,27 @@ public abstract class misArrays {
             }
         }
         return max;
-    }
+    }  
     
-    
-    
-    
-    
-    
+    /**
+     * Encuentra la nota mas baja en un array de números enteros entre 0 y 10.
+     *
+     * @param array Array de números enteros entre 0 y 10.
+     * @return La nota mas baja del array.
+     * @throws IllegalArgumentException si alguno de los números no está entre 0 y 10.
+     */
+    public static int minimaNota(int[] array) {
+        for (int num : array) {
+            if (num < 0 || num > 10) {
+                throw new IllegalArgumentException("Los números deben estar entre 0 y 10.");
+            }
+        }
+        int minNum = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < minNum) {
+                minNum = array[i];
+            }
+        }
+        return minNum;
+    }   
 }
