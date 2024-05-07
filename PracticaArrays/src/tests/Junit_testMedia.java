@@ -6,7 +6,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import util.misArrays;
 
-class Junit_test {
+class Junit_testMedia {
 	
 	static int [] notasValidas;
 	static int [] notasInvalidas;
