@@ -25,7 +25,7 @@ public abstract class misArrays {
     }
 	
     /**
-     * Calcula la mediana de un array de números enteros entre 0 y 10.
+     * Calcula la mediana de números enteros entre 0 y 10.
      *
      * @param array Array de números enteros entre 0 y 10.
      * @return La mediana del array.
@@ -48,6 +48,32 @@ public abstract class misArrays {
             return copyArray[length / 2];
         }
     }
+    
+    /**
+     * Encuentra la máxima nota en un array de números enteros entre 0 y 10.
+     *
+     * @param Array de números enteros entre 0 y 10.
+     * @return La máxima nota que hay.
+     * @throws IllegalArgumentException si alguno de los números del array no está entre 0 y 10.
+     */
+    public static int maximaNota(int[] array) {
+        for (int num : array) {
+            if (num < 0 || num > 10) {
+                throw new IllegalArgumentException("Los números en el array deben estar entre 0 y 10.");
+            }
+        }
+        int max = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+            }
+        }
+        return max;
+    }
+    
+    
+    
+    
     
     
 }
